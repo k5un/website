@@ -55,8 +55,8 @@
 					<!-- Logo
 					============================================= -->
 					<div id="logo">
-						<a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="images/logo.png" alt="LabRomance"></a>
-						<a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo@2x.png" alt="LabRomance"></a>
+						<a href="index.html" class="standard-logo" data-dark-logo="images/logo.png"><img src="images/logo.png" alt="LabRomance"></a>
+						<a href="index.html" class="retina-logo" data-dark-logo="images/logo@2x.png"><img src="images/logo@2x.png" alt="LabRomance"></a>
 					</div><!-- #logo end -->
 
 					<!-- Primary Navigation
@@ -65,7 +65,7 @@
 						<ul>
 							<li class="current"><a href="index.html"><div>Home</div></a>
 							</li>
-							<li><a href="products.html"><div>Products</div></a>
+							<li><a href="product.html"><div>Products</div></a>
 							</li>
 							<li><a href="sdk.html"><div>SDK</div></a>
 							</li>
@@ -86,14 +86,16 @@
 
 			<div class="swiper-container swiper-parent">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide dark" style="background-image: url('images/slider/swiper/1.jpg');">
+					
+					<div class="swiper-slide dark" style="background-image: url('images/img/lab.jpg');">
 						<div class="container clearfix">
 							<div class="slider-caption slider-caption-center">
-								<h2 data-caption-animate="fadeInUp">A Powerful Mind</h2>
-								<p data-caption-animate="fadeInUp" data-caption-delay="200">To understand and react</p>
+								<h2 data-caption-animate="fadeInUp">Intelligent</h2>
+								<p data-caption-animate="fadeInUp" data-caption-delay="200">LAB: THE LIVING AERIAL BOT.</p>
 							</div>
 						</div>
 					</div>
+
 					<div class="swiper-slide dark">
 						<div class="container clearfix">
 							<div class="slider-caption slider-caption-center">
@@ -109,19 +111,19 @@
 							<div class="video-overlay" style="background-color: rgba(0,0,0,0.55);"></div>
 						</div>
 					</div>
-					<div class="swiper-slide" style="background-image: url('images/slider/swiper/3.jpg'); background-position: center top;">
+
+					<div class="swiper-slide" style="background-image: url('images/img/agr.jpg'); background-position: center top;">
 						<div class="container clearfix">
 							<div class="slider-caption">
-								<h2 data-caption-animate="fadeInUp">Great Performance</h2>
-								<p data-caption-animate="fadeInUp" data-caption-delay="200">You'll be surprised to see the Final Results of your Creation &amp; would crave for more.</p>
+								<h2 data-caption-animate="fadeInUp">Chemical Spray Solution</h2>
+								<p data-caption-animate="fadeInUp" data-caption-delay="200">Compact size professional chemical spray copters finally come.</p>
 							</div>
 						</div>
 					</div>
+
 				</div>
 				<div id="slider-arrow-left"><i class="icon-angle-left"></i></div>
 				<div id="slider-arrow-right"><i class="icon-angle-right"></i></div>
-				<div id="slide-number"><div id="slide-number-current"></div><span>/</span><div id="slide-number-total"></div></div>
-				<div class="swiper-pagination"></div>
 			</div>
 
 			<script>
@@ -130,8 +132,6 @@
 						paginationClickable: false,
 						slidesPerView: 1,
 						grabCursor: true,
-						autoplay: 5000,
-						speed: 650,
 						loop: true,
 						onSwiperCreated: function(swiper){
 							$('[data-caption-animate]').each(function(){
@@ -150,7 +150,6 @@
 							SEMICOLON.slider.swiperSliderMenu();
 						},
 						onSlideChangeStart: function(swiper){
-							$('#slide-number-current').html(swiper.activeLoopIndex + 1);
 							$('[data-caption-animate]').each(function(){
 								var $toAnimateElement = $(this);
 								var elementAnimation = $toAnimateElement.attr('data-caption-animate');
@@ -199,12 +198,8 @@
 						e.preventDefault();
 						swiperSlider.swipeNext();
 					});
-
-					$('#slide-number-current').html(swiperSlider.activeLoopIndex + 1);
-					$('#slide-number-total').html($('#slider').find('.swiper-slide:not(.swiper-slide-duplicate)').length);
 				});
 			</script>
-
 
 			<a href="#" data-scrollto="#content" data-offset="100" class="dark one-page-arrow"><i class="icon-angle-down infinite animated fadeInDown"></i></a>
 
@@ -219,15 +214,73 @@
 				<div class="container bottommargin clearfix">
 					<div class="row clearfix">
 
-						<div class="col-lg-12">
+						<div class="col-lg-5">
 							<div class="topmargin">
-								<h1>Motions and Emotions to Everything</h1>
+								<h1>WILDHOG:</br> Revolutionize the Sky</h1>
 							</div>
-							<p class="lead">We make powerful platforms for Robotic controller</p>
+							<p class="lead">WILDHOG embedds NVIDIA Tegra X1 for real time image recognition, deep learning and anything you can imagine with your drones.</p>
+						</div>
+
+						<div class="col-lg-7">
+
+							<div style="position: relative; margin-bottom: -60px;" class="ohidden" data-height-lg="426" data-height-md="567" data-height-sm="470" data-height-xs="287" data-height-xxs="183">
+								<img src="images/img/JetsonTX1.jpg" style="position: absolute; top: 0; left: 0;" data-animate="fadeInUp" data-delay="10" alt="WILDHOG">
+							</div>
+
 						</div>
 
 					</div>
 				</div>
+
+
+				
+				<div class="container bottommargin clearfix">
+					<div class="row topmargin-lg clearfix">
+						<div class="col-lg-6">
+							<div style="position: relative; margin-bottom: -60px;" class="ohidden" data-height-lg="426" data-height-md="567" data-height-sm="470" data-height-xs="287" data-height-xxs="183">
+								<img src="images/img/JetsonTX1_2.jpg" style="position: absolute; top: 0; left: 0;" alt="WILDHOG">
+							</div>
+						</div>
+
+						<div class="col-lg-6">
+							<div class="topmargin">
+								<h1>LAB-X</h1>
+							</div>
+							<p class="lead">LAB-X with WILDHOG on-board brings new possibility for Drone research and development.</p>
+						</div>
+
+					</div>
+				
+				</div>
+
+				<script type="text/javascript">
+
+					jQuery(window).load(function(){
+
+						var $container = $('#portfolio');
+
+						$container.isotope({
+							transitionDuration: '0.65s',
+							masonry: {
+								columnWidth: $container.find('.portfolio-item:not(.wide)')[0]
+							}
+						});
+
+						$('#page-menu a').click(function(){
+							$('#page-menu li').removeClass('current');
+							$(this).parent('li').addClass('current');
+							var selector = $(this).attr('data-filter');
+							$container.isotope({ filter: selector });
+							return false;
+						});
+
+						$(window).resize(function() {
+							$container.isotope('layout');
+						});
+
+					});
+
+				</script>
 
 			</div>
 
@@ -253,16 +306,18 @@
 
 								<div style="background: url('images/world-map.png') no-repeat center center; background-size: 100%;">
 									<address>
-										<strong>Australia:</strong><br>
+										<strong>Headquarters:</strong><br>
 										795 Folsom Ave, Suite 600<br>
 										San Francisco, CA 94107<br>
 									</address>
 									<address>
-										<strong>Japan</strong><br>
+										<strong>JAPAN Office:</strong><br>
 										enRoute Build. 2F<br>
 										1-3-29 Ureshino, Fujimino<br>
 										Saitama Japan, 356-0056<br>
 									</address>
+									<strong>Phone:</strong> (81) 50 5898 2320<br>
+									<strong>Phone (Japan):</strong> (81) 50 5898 2320<br>
 									<strong>Email:</strong> hi@labromance.com
 								</div>
 
@@ -275,6 +330,7 @@
 							<div class="widget widget_links clearfix">
 
 								<h4>Sitemap</h4>
+
 								<ul>
 									<li><a href="wildhog.html">wildhog</a></li>
 									<li><a href="labx.html">lab-x</a></li>
@@ -337,44 +393,12 @@
 					<div class="col_one_third col_last">
 
 						<div class="widget subscribe-widget clearfix">
-
- <!-- Begin MailChimp Signup Form -->
-                <link href="assets/css/mailchimp.css" rel="stylesheet" type="text/css">
-                <style type="text/css">
-                 #mc_embed_signup{background:transparent; clear:left; font-style: bold;}
-                  /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-                     We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-                </style>
-
-                <div id="mc_embed_signup">
-                    <form action="//labromance.us9.list-manage.com/subscribe/post?u=b0e909df902f42c07296c26d2&amp;id=537e6cfad1" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                    <div id="mc_embed_signup_scroll">
-                  <label for="mce-EMAIL">
-                    Subscribe to our Newsletter to get updated!
-                  </label>
-                    </br>
-                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email" required>
-                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                    <div style="position: absolute; left: -5000px;">
-                        <input type="text" name="b_b0e909df902f42c07296c26d2_537e6cfad1" tabindex="-1" value="">
-                    </div>
-                    <div class="clear_">
-                        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-default btn-lg">
-                    </div>
-                    </div>
-                </form>
-            </div>
-<!--End mc_embed_signup-->
-
-
-
-							<h5><strong>Subscribe</strong> to Our Newsletter to get News, Offers &amp; Inside Scoops:</h5>
+							<h5><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:</h5>
 							<div id="widget-subscribe-form-result" data-notify-type="success" data-notify-msg=""></div>
-							<form id="widget-subscribe-form" action="//labromance.us9.list-manage.com/subscribe/post?u=b0e909df902f42c07296c26d2&amp;id=537e6cfad1" role="form" method="post" class="nobottommargin" target="_blank" novalidate>
-
+							<form id="widget-subscribe-form" action="include/subscribe.php" role="form" method="post" class="nobottommargin">
 								<div class="input-group divcenter">
 									<span class="input-group-addon"><i class="icon-email2"></i></span>
-									<input type="email" id="widget-subscribe-form-email" name="b_b0e909df902f42c07296c26d2_537e6cfad1" class="form-control required email" placeholder="Enter your Email">
+									<input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email">
 									<span class="input-group-btn">
 										<button class="btn btn-success" type="submit">Subscribe</button>
 									</span>
@@ -445,19 +469,29 @@
 								<i class="icon-twitter"></i>
 							</a>
 
-							<a href="https://plus.google.com/+Labromance" class="social-icon si-small si-borderless si-gplus">
+							<a href="https://plus.google.com/+Labromance/videos" class="social-icon si-small si-borderless si-gplus">
 								<i class="icon-gplus"></i>
 								<i class="icon-gplus"></i>
 							</a>
 
-							<a href="#" class="social-icon si-small si-borderless si-youtube">
-								<i class="icon-youtube"></i>
-								<i class="icon-youtube"></i>
+							<a href="#" class="social-icon si-small si-borderless si-pinterest">
+								<i class="icon-pinterest"></i>
+								<i class="icon-pinterest"></i>
+							</a>
+
+							<a href="#" class="social-icon si-small si-borderless si-vimeo">
+								<i class="icon-vimeo"></i>
+								<i class="icon-vimeo"></i>
 							</a>
 
 							<a href="#" class="social-icon si-small si-borderless si-github">
 								<i class="icon-github"></i>
 								<i class="icon-github"></i>
+							</a>
+
+							<a href="#" class="social-icon si-small si-borderless si-yahoo">
+								<i class="icon-yahoo"></i>
+								<i class="icon-yahoo"></i>
 							</a>
 
 							<a href="#" class="social-icon si-small si-borderless si-linkedin">
@@ -486,18 +520,6 @@
 	<!-- Footer Scripts
 	============================================= -->
 	<script type="text/javascript" src="js/functions.js"></script>
-
-	<!-- GA -->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-55581086-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
 
 </body>
 </html>
