@@ -4,6 +4,8 @@
 
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="author" content="LabRomance" />
+	<meta name="description" content="Powerfull platform for robotic controller">
+    <meta name="keyword" content="robot,drone,aerial,SoC,GPU">
 
 	<!-- Stylesheets
 	============================================= -->
@@ -36,7 +38,7 @@
 
 </head>
 
-<body class="stretched">
+<body class="stretched dark">
 
 	<!-- Document Wrapper
 	============================================= -->
@@ -44,7 +46,7 @@
 
 		<!-- Header
 		============================================= -->
-		<header id="header" class="transparent-header full-header" data-sticky-class="not-dark">
+		<header id="header" class="transparent-header full-header" data-sticky-class="dark">
 
 			<div id="header-wrap">
 
@@ -109,7 +111,7 @@
 							<div class="video-overlay" style="background-color: rgba(0,0,0,0.55);"></div>
 						</div>
 					</div>
-					<div class="swiper-slide" style="background-image: url('images/slider/swiper/3.jpg'); background-position: center top;">
+					<div class="swiper-slide" style="background-image: url('images/img/lab.jpg'); background-position: center top;">
 						<div class="container clearfix">
 							<div class="slider-caption">
 								<h2 data-caption-animate="fadeInUp">Great Performance</h2>
@@ -131,7 +133,7 @@
 						slidesPerView: 1,
 						grabCursor: true,
 						autoplay: 5000,
-						speed: 650,
+						speed: 500,
 						loop: true,
 						onSwiperCreated: function(swiper){
 							$('[data-caption-animate]').each(function(){
@@ -223,7 +225,7 @@
 							<div class="topmargin">
 								<h1>Motions and Emotions to Everything</h1>
 							</div>
-							<p class="lead">We make powerful platforms for Robotic controller</p>
+							<p class="lead">We make Powerful Controllers for Advanced Robotics</p>
 						</div>
 
 					</div>
@@ -338,79 +340,38 @@
 
 						<div class="widget subscribe-widget clearfix">
 
- <!-- Begin MailChimp Signup Form -->
+                <!-- Begin MailChimp Signup Form -->
                 <link href="assets/css/mailchimp.css" rel="stylesheet" type="text/css">
                 <style type="text/css">
                  #mc_embed_signup{background:transparent; clear:left; font-style: bold;}
+                 #mce-EMAIL{background:transparent; clear:left; font-style: bold; border: 1px solid rgba(255,255,255,0.25);}
                   /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
                      We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
                 </style>
 
                 <div id="mc_embed_signup">
                     <form action="//labromance.us9.list-manage.com/subscribe/post?u=b0e909df902f42c07296c26d2&amp;id=537e6cfad1" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                    <div id="mc_embed_signup_scroll">
-                  <label for="mce-EMAIL">
-                    Subscribe to our Newsletter to get updated!
-                  </label>
-                    </br>
-                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email" required>
-                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                    <div style="position: absolute; left: -5000px;">
-                        <input type="text" name="b_b0e909df902f42c07296c26d2_537e6cfad1" tabindex="-1" value="">
-                    </div>
-                    <div class="clear_">
-                        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-default btn-lg">
-                    </div>
-                    </div>
-                </form>
-            </div>
+            	    	<div id="mc_embed_signup_scroll">
+        	          		<label for="mce-EMAIL">Subscribe to our Newsletter to get updated!</label>
+    	                	</br>
+  	                  		<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email" required>
+                    		<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+	                    	<div style="position: absolute; left: -5000px;">
+	                        	<input type="text" name="b_b0e909df902f42c07296c26d2_537e6cfad1" tabindex="-1" value="">
+		                    </div>
+    	                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-default btn-md">
+        	            </div>
+            	    </form>
+            	</div>
 <!--End mc_embed_signup-->
 
 
-
-							<h5><strong>Subscribe</strong> to Our Newsletter to get News, Offers &amp; Inside Scoops:</h5>
-							<div id="widget-subscribe-form-result" data-notify-type="success" data-notify-msg=""></div>
-							<form id="widget-subscribe-form" action="//labromance.us9.list-manage.com/subscribe/post?u=b0e909df902f42c07296c26d2&amp;id=537e6cfad1" role="form" method="post" class="nobottommargin" target="_blank" novalidate>
-
-								<div class="input-group divcenter">
-									<span class="input-group-addon"><i class="icon-email2"></i></span>
-									<input type="email" id="widget-subscribe-form-email" name="b_b0e909df902f42c07296c26d2_537e6cfad1" class="form-control required email" placeholder="Enter your Email">
-									<span class="input-group-btn">
-										<button class="btn btn-success" type="submit">Subscribe</button>
-									</span>
-								</div>
-							</form>
-							<script type="text/javascript">
-								jQuery("#widget-subscribe-form").validate({
-									submitHandler: function(form) {
-										jQuery(form).find('.input-group-addon').find('.icon-email2').removeClass('icon-email2').addClass('icon-line-loader icon-spin');
-										jQuery(form).ajaxSubmit({
-											target: '#widget-subscribe-form-result',
-											success: function() {
-												jQuery(form).find('.input-group-addon').find('.icon-line-loader').removeClass('icon-line-loader icon-spin').addClass('icon-email2');
-												jQuery('#widget-subscribe-form').find('.form-control').val('');
-												jQuery('#widget-subscribe-form-result').attr('data-notify-msg', jQuery('#widget-subscribe-form-result').html()).html('');
-												SEMICOLON.widget.notifications(jQuery('#widget-subscribe-form-result'));
-											}
-										});
-									}
-								});
-							</script>
 						</div>
 
 						<div class="widget clearfix" style="margin-bottom: -20px;">
 
 							<div class="row">
 
-								<div class="col-md-6 clearfix bottommargin-sm">
-									<a href="https://www.facebook.com/labromanceinc/" class="social-icon si-dark si-colored si-facebook nobottommargin" style="margin-right: 10px;">
-										<i class="icon-facebook"></i>
-										<i class="icon-facebook"></i>
-									</a>
-									<a href="https://www.facebook.com/labromanceinc/"><small style="display: block; margin-top: 3px;"><strong>Like us</strong><br>on Facebook</small></a>
-								</div>
-								<div class="col-md-6 clearfix">
-								</div>
 
 							</div>
 
@@ -429,7 +390,7 @@
 				<div class="container clearfix">
 
 					<div class="col_half">
-						Copyrights &copy; 2015 LabRomance Inc.<br>
+						Copyrights &copy; 2016 LabRomance Inc.<br>
 						<div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
 					</div>
 
@@ -468,7 +429,6 @@
 
 						<div class="clear"></div>
 
-						<i class="icon-envelope2"></i> hi@labromance.com <span class="middot">&middot;</span> <i class="icon-headphones"></i> +81-50-5898-2320
 					</div>
 
 				</div>
