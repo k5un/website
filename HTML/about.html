@@ -36,7 +36,7 @@
 
 	<!-- Document Title
 	============================================= -->
-	<title>LabRomance</title>
+	<title>About us</title>
 
 </head>
 
@@ -86,136 +86,17 @@
 
 		</header><!-- #header end -->
 
-		<section id="slider" class="slider-parallax swiper_wrapper full-screen clearfix">
+		
 
-			<div class="swiper-container swiper-parent">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide dark" style="background-image: url('images/wildhog.jpg');">
-						<div class="container clearfix">
-							<div class="slider-caption slider-caption-left">
-								<h3 data-caption-animate="fadeInUp">Vision for Robots</h3>
-								<p data-caption-animate="fadeInUp" data-caption-delay="0">CUDA powered controller for Robots and UAV</p>
-								<p data-caption-animate="fadeInUp" data-caption-delay="0"><a href="#" class="button button-border button-light button-large button-rounded tright nomargin"><span>more</span> <i class="icon-angle-right"></i></a></p>
-							</div>
-						</div>
-					</div>
-					<div class="swiper-slide dark">
-						<div class="container clearfix">
-							<div class="slider-caption slider-caption-left">
-								<h3 data-caption-animate="fadeInUp">Real-Time Segmentation</h3>
-								<p data-caption-animate="fadeInUp" data-caption-delay="100">SegNet running on Wildhog</p>
-								<p data-caption-animate="fadeInUp" data-caption-delay="100"><a href="#" class="button button-border button-white button-light button-large button-rounded tright nomargin"><span>more</span> <i class="icon-angle-right"></i></a></p>
-							</div>
-						</div>
-						<div class="video-wrap">
-							<video id="slide-video" poster="images/videos/explore.jpg" preload="auto" loop autoplay muted>
-								<source src='images/videos/explore.webm' type='video/webm' />
-								<source src='images/videos/explore.mp4' type='video/mp4' />
-							</video>
-							<div class="video-overlay" style="background-color: rgba(0,0,0,0.5);"></div>
-						</div>
-					</div>
-					<div class="swiper-slide dark" style="background-image: url('images/openkai.jpg'); background-position: center top;">
-						<div class="container clearfix">
-							<div class="slider-caption slider-caption-left">
-								<p data-caption-animate="fadeInUp" data-caption-delay="0"><b>OpenKAI</b></p>
-								<p data-caption-animate="fadeInUp" data-caption-delay="0">Open Source Kinetic AI purely in C++</p>
-								<p data-caption-animate="fadeInUp" data-caption-delay="0"><a href="#" class="button button-border button-dark button-large button-rounded tright nomargin"><span>code</span> <i class="icon-angle-right"></i></a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div id="slider-arrow-left"><i class="icon-angle-left"></i></div>
-				<div id="slider-arrow-right"><i class="icon-angle-right"></i></div>
-				<div id="slide-number"><div id="slide-number-current"></div><span>/</span><div id="slide-number-total"></div></div>
-				<div class="swiper-pagination"></div>
+
+		<!-- Page Title ============================================= -->
+		<section id="page-title" class="page-title-parallax page-title-dark page-title-right" style="padding: 250px 0; background-image: url('images/openkai.jpg'); background-size: cover; background-position: center center;" data-stellar-background-ratio="0.2">
+
+			<div class="container clearfix">
+				<h1></h1>
 			</div>
 
-			<script>
-				jQuery(document).ready(function($){
-					var swiperSlider = new Swiper('.swiper-parent',{
-						paginationClickable: false,
-						slidesPerView: 1,
-						grabCursor: true,
-						autoplay: 6000,
-						speed: 500,
-						loop: true,
-						onSwiperCreated: function(swiper){
-							$('[data-caption-animate]').each(function(){
-								var $toAnimateElement = $(this);
-								var toAnimateDelay = $(this).attr('data-caption-delay');
-								var toAnimateDelayTime = 0;
-								if( toAnimateDelay ) { toAnimateDelayTime = Number( toAnimateDelay ) + 750; } else { toAnimateDelayTime = 750; }
-								if( !$toAnimateElement.hasClass('animated') ) {
-									$toAnimateElement.addClass('not-animated');
-									var elementAnimation = $toAnimateElement.attr('data-caption-animate');
-									setTimeout(function() {
-										$toAnimateElement.removeClass('not-animated').addClass( elementAnimation + ' animated');
-									}, toAnimateDelayTime);
-								}
-							});
-							SEMICOLON.slider.swiperSliderMenu();
-						},
-						onSlideChangeStart: function(swiper){
-							$('#slide-number-current').html(swiper.activeLoopIndex + 1);
-							$('[data-caption-animate]').each(function(){
-								var $toAnimateElement = $(this);
-								var elementAnimation = $toAnimateElement.attr('data-caption-animate');
-								$toAnimateElement.removeClass('animated').removeClass(elementAnimation).addClass('not-animated');
-							});
-							SEMICOLON.slider.swiperSliderMenu();
-						},
-						onSlideChangeEnd: function(swiper){
-							$('#slider').find('.swiper-slide').each(function(){
-								if($(this).find('video').length > 0) { $(this).find('video').get(0).pause(); }
-								if($(this).find('.yt-bg-player').length > 0) { $(this).find('.yt-bg-player').pauseYTP(); }
-							});
-							$('#slider').find('.swiper-slide:not(".swiper-slide-active")').each(function(){
-								if($(this).find('video').length > 0) {
-									if($(this).find('video').get(0).currentTime != 0 ) $(this).find('video').get(0).currentTime = 0;
-								}
-								if($(this).find('.yt-bg-player').length > 0) {
-									$(this).find('.yt-bg-player').getPlayer().seekTo( $(this).find('.yt-bg-player').attr('data-start') );
-								}
-							});
-							if( $('#slider').find('.swiper-slide.swiper-slide-active').find('video').length > 0 ) { $('#slider').find('.swiper-slide.swiper-slide-active').find('video').get(0).play(); }
-							if( $('#slider').find('.swiper-slide.swiper-slide-active').find('.yt-bg-player').length > 0 ) { $('#slider').find('.swiper-slide.swiper-slide-active').find('.yt-bg-player').playYTP(); }
-
-							$('#slider .swiper-slide.swiper-slide-active [data-caption-animate]').each(function(){
-								var $toAnimateElement = $(this);
-								var toAnimateDelay = $(this).attr('data-caption-delay');
-								var toAnimateDelayTime = 0;
-								if( toAnimateDelay ) { toAnimateDelayTime = Number( toAnimateDelay ) + 300; } else { toAnimateDelayTime = 300; }
-								if( !$toAnimateElement.hasClass('animated') ) {
-									$toAnimateElement.addClass('not-animated');
-									var elementAnimation = $toAnimateElement.attr('data-caption-animate');
-									setTimeout(function() {
-										$toAnimateElement.removeClass('not-animated').addClass( elementAnimation + ' animated');
-									}, toAnimateDelayTime);
-								}
-							});
-						}
-					});
-
-					$('#slider-arrow-left').on('click', function(e){
-						e.preventDefault();
-						swiperSlider.swipePrev();
-					});
-
-					$('#slider-arrow-right').on('click', function(e){
-						e.preventDefault();
-						swiperSlider.swipeNext();
-					});
-
-					$('#slide-number-current').html(swiperSlider.activeLoopIndex + 1);
-					$('#slide-number-total').html($('#slider').find('.swiper-slide:not(.swiper-slide-duplicate)').length);
-				});
-			</script>
-
-
-			<a href="#" data-scrollto="#content" data-offset="100" class="dark one-page-arrow"><i class="icon-angle-down infinite animated fadeInDown"></i></a>
-
-		</section>
+		</section><!-- #page-title end -->
 
 		<!-- Content
 		============================================= -->
@@ -223,23 +104,49 @@
 
 			<div class="content-wrap">
 
-				<div class="container bottommargin clearfix">
+				<div class="container clearfix">
+
 					<div class="row clearfix">
 
-						<div class="col-lg-12 center">
-							<div class="topmargin">
-								<h1>Motions &amp; Emotions to Everything</h1>
-							</div>
-							<p class="lead">We Make Powerful Controllers for Advanced Robotics</p>
-							<p class="lead"><a href="#" class="button button-border button-light button-large button-rounded tright nomargin"><span>Explore</span> <i class="icon-angle-right"></i></a></p>
+						<div class="col-md-12">
+
+							<h3>About us</h3>
+
+							<p>LabRomance is a robot developer founded by former researchers at Stanford University and the University of Tokyo. We are a team from quantum physics, computer science, aerodynamics and automobiles. Our mission is to bring everything motions and emotions by the power of robotics.</p>
+
 						</div>
 
-					</div>
-				</div>
+						<div class="col-md-6">
 
+							<h3>Kai Yan</h3>
+							<h4>CEO &amp; Co-Founder</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa repellendus adipisci laborum placeat delectus labore cupiditate deserunt minus numquam consequatur esse, hic at earum illo animi eaque et, dolorem quo qui eos? Quam rerum possimus maxime veniam aut ratione eveniet aliquid cumque aspernatur ipsum libero quaerat, nam. Ad, sunt, error!</p>
+
+						</div>
+
+
+
+						<div class="col-md-6">
+
+							<h3>Kang Sun</h3>
+							<h4>President &amp; Co-Founder</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa repellendus adipisci laborum placeat delectus labore cupiditate deserunt minus numquam consequatur esse, hic at earum illo animi eaque et, dolorem quo qui eos? Quam rerum possimus maxime veniam aut ratione eveniet aliquid cumque aspernatur ipsum libero quaerat, nam. Ad, sunt, error!</p>
+
+						</div>
+
+
+
+
+					</div>
+
+				</div>
+				
 			</div>
 
 		</section><!-- #content end -->
+
+
+
 
 		<!-- Footer
 		============================================= -->
